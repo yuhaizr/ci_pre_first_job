@@ -1,0 +1,94 @@
+
+		/* 导航栏 开始*/
+		.nav_all{
+			background-color: #0090CE; 
+			text-align: center;
+			font-size: 20px;
+		}
+		.nav_li{
+			background-color: #0090CE;
+			width: 12%;
+
+		}
+		#nav_first{
+			width: 10%;
+		}
+		#nav_li_dropdown{
+			width: 14%;
+		}
+		.nav_li:hover{
+			background-color: #0074A6; 
+		}
+		body{
+			background-color: #F1F1F1;
+		}
+		.nav_ul{
+			width: 100%;
+			line-height: 50px;
+		}
+		.nav_ul_li_ul_li:hover{
+			background-color: #0090CE;
+		}
+		.nav_ul_li_ul{
+			background-color: #0074A6;
+
+			
+		}
+		.nav_ul_li_ul_li{
+			line-height: 35px;
+		}
+		.container-fluid{
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+
+		#login{
+			float: right;
+		}
+		.container{
+			float: left;
+			width: 75%;
+		}
+		.nav_right{
+			float: right;
+			vertical-align: middle;
+		}
+		#login{
+			vertical-align: middle;
+			float: left;
+			line-height: 50px;
+		}
+		#loginModal{
+			width: 60%;
+			vertical-align: middle;
+			top: 20%;
+		}
+		.moddal-dialog{
+			vertical-align: middle;
+			width: 500px;
+			height: 450px;
+		}
+		
+
+		/* 导航栏 结束*/
+
+
+
+
+
+		
+		.div_image{
+			width: 20%;
+			height: 120px;
+
+
+		}
+		.jumbotron{
+			border: solid 1px;
+			width: 80%
+		}
+		#email,#password{
+			height: 35px;
+		}
+
+
