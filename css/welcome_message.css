@@ -1,12 +1,19 @@
 
 		/* 导航栏 开始*/
+		#top_div{
+			background-color: #2e3138;
+			height: 30px;
+		}
 		.nav_all{
-			background-color: #0090CE; 
+			background-color: #FFFFFF; 
 			text-align: center;
 			font-size: 20px;
+			font:#000;
+			font-weight: bold; 
 		}
+		
 		.nav_li{
-			background-color: #0090CE;
+			background-color: #FFFFFF;
 			width: 12%;
 
 		}
@@ -20,11 +27,13 @@
 			background-color: #0074A6; 
 		}
 		body{
-			background-color: #F1F1F1;
+			background-color: #e6e6e6;
+
 		}
 		.nav_ul{
 			width: 100%;
 			line-height: 50px;
+
 		}
 		.nav_ul_li_ul_li:hover{
 			background-color: #0090CE;
@@ -42,9 +51,6 @@
 			padding-left: 0px;
 		}
 
-		#login{
-			float: right;
-		}
 		.container{
 			float: left;
 			width: 75%;
@@ -55,8 +61,8 @@
 		}
 		#login{
 			vertical-align: middle;
-			float: left;
-			line-height: 50px;
+			float: right;
+			line-height: 20px;
 		}
 		#loginModal{
 			width: 60%;
@@ -67,6 +73,17 @@
 			vertical-align: middle;
 			width: 500px;
 			height: 450px;
+		}
+		#top_login{
+			background-color: #2E3138;
+			margin:0px;
+			border-color:#000;
+			margin-right: 160px;
+
+		}
+		#register{
+			float: right;
+			width: 54px;
 		}
 		
 
@@ -84,11 +101,46 @@
 
 		}
 		.jumbotron{
-			border: solid 1px;
-			width: 80%
+			
+			background: #FFFFFF;
+			margin: 5px;
+			padding: 10px;
+			padding-right:0px;
+			padding-left:0px;
+			cursor: 0;
+		}
+		#jumbotron{
+			margin: 0px;
+			padding: 20px;
+			margin-bottom: 20px;
+			width: 100%;
+		
 		}
 		#email,#password{
 			height: 35px;
+		}
+
+		#article_list{
+			
+			width: 60%; 
+			margin-left:10%;
+		}
+		#right_div{
+		
+			border: solid 1px;
+			float: left;
+			width: 20%;
+			height: 100px;
+		}
+		.media-heading{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.article_origin{
+			margin-right: 30px;
+		}
+		.media-body div{
+			line-height: 2em;
 		}
 
 

@@ -33,7 +33,7 @@
   				}
 
   				// var_dump($_SESSION['avatar_url'],$user_info);
-  				echo $this->session->userdata('avatar_url');
+  			//	echo $this->session->userdata('avatar_url');
   				$this->load->view('welcome_message');
   				//$this->load->view('welcome_message');
   			}

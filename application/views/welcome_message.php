@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!DOCTYPE html>
 <head lang="en">
+
     <meta charset="UTF-8">
 
 	<title>欢迎来到<?php echo APP_NAME;?></title>
@@ -17,9 +18,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	 
 </head>
 <body>
+	<div id ="top_div">
 
-	<?php echo BASEPATH;?>
+		<div id="login">
+			 <?php if($this->session->userdata('avatar_url')) {  ?> 
+			<img width="40px" height="40px" src="<?php echo $_SESSION['avatar_url']?>"  >
+			<?php  }else{  ?>
+			<a id="top_login" data-toggle="modal" href="user/login.html" data-target="#loginModal"  class="btn btn-primary btn-large">登入</a>
+			<?php }?>
+		</div>
+		<div id="register">
+			 <?php if($this->session->userdata('avatar_url')) {  ?> 
+			<img width="40px" height="40px" src="<?php echo $_SESSION['avatar_url']?>"  >
+			<?php  }else{  ?>
+			<a id="top_login" data-toggle="modal" href="user/login.html" data-target="#loginModal"  class="btn btn-primary btn-large">注册</a>
+			<?php }?>
+		</div>
+
+	</div>
 	<!-- 导航栏   开始 -->
+
  	<div class="container-fluid">
 	
 		<nav class="navbar navbar-default">	
@@ -27,15 +45,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="collapse navbar-collapse nav_all " id="bs-example-navbar-collapse-1">
 			 	<div class="container">
 				 	<ul class="nav navbar-nav nav_ul">
-					
+						
 						<li role="presentation" class="nav_li" ><span>&nbsp;</span></li>
+						<li role="presentation" class="nav_li" ><span>&nbsp;</span></li>
+		
+						
+
 						<li role="presentation" class="nav_li" id="nav_first"><a href="index.php">首页</a></li>
 					
-						<li role="presentation" class="nav_li"> <a href="index.php">行业资讯</a></li>
+						<li role="presentation" class="nav_li"> <a href="index.php">资讯</a></li>
 					
 						<li role="presentation" class="nav_li dropdown" id="nav_li_dropdown">
 								
-								<a href="index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">公司类别<span class="caret"></span></a>
+								<a href="index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">公司<span class="caret"></span></a>
 								
 								<ul class="dropdown-menu nav_ul_li_ul" role="menu">	
 
@@ -48,24 +70,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</ul>
 						</li>
 
-						<li role="presentation" class="nav_li"> <a href="index.php">职位介绍</a></li>
 
-						<li role="presentation" class="nav_li"> <a href="index.php">岗位能力</a></li>
+						<li role="presentation" class="nav_li"> <a href="index.php">岗位</a></li>
 
-						<li role="presentation" class="nav_li"> <a href="index.php">门户导航</a></li>
+						<li role="presentation" class="nav_li"> <a href="index.php">技能</a></li>
 
-						<li role="presentation" class="nav_li"> <a href="index.php">求职招聘</a></li>
+						<li role="presentation" class="nav_li"> <a href="index.php">学习导航</a></li>
 
 					</ul>
 
 				</div>
-				<div id="login">
-					 <?php if($this->session->userdata('avatar_url')) {  ?> 
-					<img width="40px" height="40px" src="<?php echo $_SESSION['avatar_url']?>"  >
-					<?php  }else{  ?>
-					<a data-toggle="modal" href="user/login.html" data-target="#loginModal"  class="btn btn-primary btn-large">登入</a>
-					<?php }?>
-				</div>
+		
 
 			
 
@@ -107,115 +122,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		登入
 	</div>
-
+	<div class="cancle_div"></div>
 	<!-- 登入弹出框 结束 -->	
 	<!-- 全部内容  开始-->
-	<div class="container">
+	<div class="container-fluid">
+		<div class="container" id="article_list">
+		<?php foreach ($welcome_article_list as $key => $article) { ?>
+		
+			<div class="jumbotron" id="jumbotron">
 
-		<div class="jumbotron">
+				<div class="media">
 
-			<div class="media">
+				  <div class="media-left div_image">
 
-			  <div class="media-left div_image">
+				    <a href="#">
+					
+				      <img width="100%" height="100%" class="media-object" src="<?php echo $article['image'] ?>" alt="...">
+				   
+				    </a>
 
-			    <a href="#">
+				  </div>
 
-			      <img width="100%" height="100%" class="media-object" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			   
-			    </a>
+				  <div class="media-body">
 
-			  </div>
+				    <h4 class="media-heading"><?php echo  $article['title']?></h4>
+					<div>
+						<span class="article_origin">
+							<?php echo $article['origin'] ?>
+						</span>
+						<?php echo $article['create_time'] ?> 
+					</div>
+					<div>
+				  	  <span><?php echo $article['content']?></span>
+					</div>
+				  </div>
 
-			  <div class="media-body">
+				</div>
 
-			    <h4 class="media-heading">Media heading</h4>
-
-			    <span>内容内容呢内容内容呢内容内容呢内容内容呢</span>
-
-			  </div>
-
-			</div>
-
-		</div> 
-
-	</div>
-	
-	<div class="container">
-		<div class="row">
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
-			</div>
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
-			</div>
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
-			</div>
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢
-			        容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
-			</div>						
+			</div> 
+		
+		<?php }  ?>
 
 		</div>
-	</div>
-	<div class="container">
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
+		<div>
+			<div id="right_div">
+				sadasd
 			</div>
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
+			<div id="right_div">
+				sadasd
 			</div>
-
-			<div class="col-xs-2">
-			    <div class="thumbnail">
-			      <img width="100%" height="100%" src="<?php echo IMAGE_PATH ?>/welcome_bg.jpg" alt="...">
-			      <div class="caption">
-			        <p>内容内容呢内容内容呢内容内容呢内容内容呢</p>
-			      </div>
-			    </div>
-			</div>		
-
-
+			<div id="right_div">
+				sadasd
+			</div>
+			<div id="right_div">
+				sadasd
+			</div>
+			
+		<div>
 	</div>
 
 	 <!-- 全部内容  结束-->
@@ -223,7 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-  <?php echo  date('Y-m-d H:i:s') ?>
+
 
 
 
