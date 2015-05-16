@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>欢迎来到<?php echo APP_NAME;?></title>
 
  	<link rel="stylesheet" type="text/css" href="<?php echo  base_url() ;?>bootstrap/css/bootstrap.css">
- 	<link rel="stylesheet" type="text/css" href="<?php echo  base_url() ;?>/css/welcome_message.css">
+ 	<link rel="stylesheet" type="text/css" href="<?php echo  base_url() ;?>css/welcome_message.css">
 
 	<script type="text/javascript" src ="<?php echo  base_url() ;?>js/jquery-2.1.1.js" ></script>
 	<script type="text/javascript" src="<?php echo  base_url() ;?>bootstrap/js/bootstrap.js"></script>
@@ -137,7 +137,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				    <a href="#">
 					
-				      <img width="100%" height="100%" class="media-object" src="<?php echo $article['image'] ?>" alt="...">
+				      <img width="100px" height="100px" class="media-object" src="<?php echo $article['image'] ?>" alt="...">
 				   
 				    </a>
 

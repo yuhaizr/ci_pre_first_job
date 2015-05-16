@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:81/ci_pre_first_job/';
+//$config['base_url'] = 'http://zhangjun.cnd20150623.benbenidc.com/ci_pre_first_job';
 
 /*
 |--------------------------------------------------------------------------
