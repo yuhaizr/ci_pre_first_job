@@ -17,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-// $config['base_url'] = 'http://localhost:81/ci_pre_first_job/';
-$config['base_url'] = 'http://zhangjun.cnd20150623.benbenidc.com/ci_pre_first_job';
+// $config['base_url'] = 'http://localhost:81/ci_pre_first_job/admin';
+$config['base_url'] = 'http://zhangjun.cnd20150623.benbenidc.com/ci_pre_first_job/admin';
 
 /*
 |--------------------------------------------------------------------------
@@ -504,3 +504,4 @@ $config['proxy_ips'] = '';
 
 $config['sess_use_database'] = TRUE;
 $config['sess_table_name'] = 'ci_sessions';
+$config['time_zone']=date_default_timezone_set('Asia/shanghai');
