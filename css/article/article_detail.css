@@ -1,0 +1,31 @@
+ #all{
+  	margin-left: 10%;
+  }
+
+  .article{
+  	background-color:#fff;
+  	width: 760px;
+  }
+  .title{
+  	font-weight: bold;
+  	padding-left : 30px;
+  	line-height: 45px;
+  	padding-top: 1px;
+  	text-align: center;
+  }
+
+  .orgin_time{
+  	background-color:#f9f9f9;
+  	color: #999;
+  	line-height: 30px
+  }
+  .article_image{
+  	max-width: 100%;
+  }
+  .article_image img{
+  	max-width: 100%;
+  }
+  .content{
+  	margin-left: 22px;
+  	margin-right: 25px;
+  }

@@ -89,5 +89,10 @@ define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
+
 define('APP_NAME', '职场第一课');  //设置APP名称常量
-define('IMAGE_PATH', 'http://zhangjun.cnd20150623.benbenidc.com/image/admin'); //设置图片存放的地址
+define('IMAGE_PATH', 'http://localhost:81/ci_pre_first_job/image/'); //设置图片存放的地址
+define('BOOTSTRAP_PATH', 'http://zhangjun.cnd20150623.benbenidc.com/bootstrap');//设置bootstrap的路径
+define('SUMMERNOTE_PATH', 'http://zhangjun.cnd20150623.benbenidc.com/summernote');//设置文本编辑器summernote的路径
+define('JS_PATH', 'http://zhangjun.cnd20150623.benbenidc.com/js');//设置公共JS文件的路径
+define('KINDEDITOR_PATH', 'http://zhangjun.cnd20150623.benbenidc.com/kindeditor-4.1.10-zh-CN/kindeditor-4.1.10');//设置公共JS文件的路径

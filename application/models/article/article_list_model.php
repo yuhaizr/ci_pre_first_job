@@ -32,6 +32,9 @@
  	function fix_welcome_article($welcome_article_list){
  		foreach ($welcome_article_list as $key => $value) {
  			$content = $value['content'];
+      $content = strip_tags($content);
+      $content = str_replace(array(" ","&nbsp;"), "", $content);
+      // var_dump($content);
  			$content = $this->msubstr($content, 0,70,count($content))."......";
  			$welcome_article_list[$key]['content'] = $content;
  		}
@@ -39,6 +42,19 @@
  		return $welcome_article_list;
  	}
 
+  function article_detail($article_id){
+
+        $this->db->select('aid,title,content,image,origin,link,create_time');
+        $this->db->from('pre_article');
+        $this->db->where('aid',$article_id);
+
+        $query = $this->db->get();
+
+        $article = new StdClass();
+        $article = $query->row_array();
+        return $article;
+
+  }
 
 
 

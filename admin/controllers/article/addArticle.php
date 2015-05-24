@@ -13,6 +13,8 @@
   			$image = $_FILES['image'];
   			$title = $_POST['title'];
   			$content = $_POST['content'];
+        //在新行里加上<br>
+       // $content = nl2br($content);
   			$origin = $_POST['origin'];
   			$tmp_path = $image['tmp_name'];
   			$link =  $_POST['link'];

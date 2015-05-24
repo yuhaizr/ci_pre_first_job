@@ -1,0 +1,32 @@
+	
+
+	<?php $this->load->view('header.html') ?>
+ 	<link rel="stylesheet" type="text/css" href="<?php echo  base_url() ;?>css/article/article_detail.css">
+
+	<title><?php echo $article['title'];?></title>
+
+	<?php $this->load->view('nav.html') ?>
+
+	<div class="container" id="all" >
+		<div class="row">
+			<div class="article">
+				<div class="title">
+					<h2><?php echo $article['title'];?></h2>
+				</div>
+				<div class="orgin_time">
+					<?php echo $article['origin'];?>
+					<?php echo $article['create_time'];?>
+				</div>
+				<div class="article_image">
+					<img src="<?php echo $article['image'];?>">
+				</div>
+				<div class="content">
+					<?php echo $article['content'];?>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<?php $this->load->view('footer.html')?>
